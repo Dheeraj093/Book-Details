@@ -1,60 +1,138 @@
-Book Management App
-Welcome to the Book Management App! This is a simple web application that allows you to manage your book collection. You can add new books, view their details, edit information, and even delete them. Let's get started!
+Book Management System README
 
-Table of Contents
+
+Project Overview
+
+This project is a simple Book Management System built using React for the frontend and a Node.js backend with Express. The system allows users to add, view, update, and delete books. Additionally, it integrates with an external API to search for external books.
+
 Features
+
+Add Book:
+
+Users can add a new book to the system by providing details such as name, ISBN, authors, country, number of pages, publisher, and release date.
+
+
+View Books:
+
+The system displays a list of all books, including details like name, ISBN, authors, number of pages, country, publisher, and release date.
+
+
+Search Books:
+
+Users can search for books by name, and the system will display the matching results.
+
+
+Update Book:
+
+Users can edit the details of a book by navigating to the update page and modifying the necessary information.
+
+
+Delete Book:
+
+Users can delete a book from the system, removing it permanently.
+
+
+External Book Search:
+
+The system integrates with an external API to search for books from an external source.
+
+
+Project Structure
+
+
+The project is organized into different components:
+
+AddBookForm:
+
+Component for adding new books.
+
+
+BookCard:
+
+Component to display details of a book, including options to edit or delete.
+
+
+BookSearchPage:
+
+Page for searching and displaying books, with an option to search external books.
+
+
+UpdateBook:
+
+Component for updating the details of a book.
+
+
+Navbar:
+
+Navigation bar for easy access to different pages.
+
+
 Getting Started
-How to Use
-API Endpoints
-Technologies Used
-Contributing
-License
-Features
-Add Book: You can add new books to your collection by providing details like name, ISBN, authors, country, number of pages, publisher, and release date.
 
-View Book Details: See all the details of a book, including its name, ISBN, authors, country, number of pages, publisher, and release date.
-
-Edit Book: If you want to update the information of a book, simply click the "Edit" button, make your changes, and save.
-
-Delete Book: Remove a book from your collection by clicking the "Delete" button.
-
-Getting Started
-Clone the Repository:
+Clone the repository:
 
 bash
+
 Copy code
-git clone <repository-url>
-Install Dependencies:
+
+git clone <repository_url>
+
+Install dependencies:
 
 bash
+
 Copy code
-cd book-management-app
+
+cd <project_directory>
+
 npm install
-Start the App:
 
-sql
+Run the application:
+
+bash
+
 Copy code
+
 npm start
-How to Use
-Open the application in your web browser.
 
-Navigate to the "Add Book" page to add a new book to your collection.
 
-View your book collection on the homepage.
+The application will be accessible at http://localhost:3000.
 
-Click on a book to see its details, and use the "Edit" and "Delete" buttons as needed.
+Dependencies
+
+React: A JavaScript library for building user interfaces.
+
+Axios: A promise-based HTTP client for making API requests.
+
+React Router: A routing library for navigation within the React application.
 
 API Endpoints
-GET /api/v1/books: Get a list of all books.
-GET /api/v1/books/:id: Get details of a specific book by ID.
-POST /api/v1/books/createBook: Add a new book.
-PATCH /api/v1/books/updateBook/:id: Update the details of a specific book by ID.
-DELETE /api/v1/books/deleteBook/:id: Delete a specific book by ID.
-Technologies Used
-React
-Node.js
-Express
-MongoDB
-Axios
-Contributing
-Contributions are welcome! If you have any ideas for improvement or find any issues, feel free to create a pull request or open an issue.
+
+GET /api/v1/books/getBooks:
+
+Fetch all books.
+
+GET /api/v1/books/getBookById/:id:
+
+Fetch details of a specific book by ID.
+
+POST /api/v1/books/createBook:
+
+Add a new book.
+
+PATCH /api/v1/books/updateBook/:id:
+
+Update the details of a book by ID.
+
+DELETE /api/v1/books/deleteBook/:id:
+
+Delete a book by ID.
+
+GET /api/external-books/getExternalBooks:
+
+Fetch external books from an external API.
+
+Important Note
+
+This project assumes the availability and proper functioning of the backend API at the specified URLs. Make sure the backend is running and accessible.
+Feel free to explore and enhance the project based on your requirements. Happy coding!
