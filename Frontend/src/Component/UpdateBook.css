@@ -1,0 +1,64 @@
+.update-book-form-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-book-title {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 16px;
+    margin-left: 100px;
+    width: calc(100% - 250px);
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+.update-book-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.update-book-btn:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 600px) {
+    .update-book-form-container {
+        max-width: 100%;
+    }
+}
