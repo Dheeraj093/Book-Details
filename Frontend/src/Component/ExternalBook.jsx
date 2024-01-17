@@ -9,13 +9,13 @@ const BookSearchPage = () => {
   const [allBooks, setAllBooks] = useState([]);
 
   useEffect(() => {
-    
     fetchAllBooks();
   }, []);
 
   const fetchAllBooks = async () => {
     try {
-      const response = await axios.get('https://book-details-6nel.onrender.com/api/external-books/getExternalBooks');
+      const response = await axios.get('http://localhost:5000/api/external-books/getExternalBooks');
+      console.log(response.data.data)
       setAllBooks(response.data.data);
     } catch (error) {
       console.error('Error fetching all books:', error.message);
@@ -24,7 +24,7 @@ const BookSearchPage = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`https://book-details-6nel.onrender.com/api/external-books/getExternalBooks?name=${searchTerm}`);
+      const response = await axios.get(`http://localhost:5000/api/external-books/getExternalBooks?name=${searchTerm}`);
       setSearchResults(response.data.data);
     } catch (error) {
       console.error('Error searching books:', error.message);

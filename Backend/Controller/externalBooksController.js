@@ -6,7 +6,11 @@ exports.getExternalBooks = async (req, res) => {
 
   try {
     // Make a request to the external API
-    const response = await axios.get(`https://anapioficeandfire.com/api/books/?name=${name}`);
+    const apiUrl = name
+      ? `https://anapioficeandfire.com/api/books/?name=${name}`
+      : 'https://anapioficeandfire.com/api/books/';
+      
+    const response = await axios.get(apiUrl);
     
     // Check if the API response contains data
     if (!response.data || response.data.length === 0) {
