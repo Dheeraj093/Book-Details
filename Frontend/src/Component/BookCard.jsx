@@ -8,7 +8,7 @@ const BookCard = ({ book, type }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/v1/books/deleteBook/${book._id}`);
+      await axios.delete(`https://book-details-6nel.onrender.com/api/v1/books/deleteBook/${book._id}`);
       window.location.reload();
     } catch (error) {
       console.error('Error deleting book:', error.message);

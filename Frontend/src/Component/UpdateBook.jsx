@@ -20,7 +20,7 @@ const UpdateBook = () => {
      
     const fetchBookDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/v1/books/getBookById/${bookId}`);
+        const response = await axios.get(`https://book-details-6nel.onrender.com/api/v1/books/getBookById/${bookId}`);
         const bookDetails = response.data.data;
         setFormData(bookDetails);
       } catch (error) {
@@ -40,7 +40,7 @@ const UpdateBook = () => {
     e.preventDefault();
 
     try {
-          const res = await axios.patch(`http://localhost:5000/api/v1/books/updateBook/${bookId}`, formData);
+          const res = await axios.patch(`https://book-details-6nel.onrender.com/api/v1/books/updateBook/${bookId}`, formData);
   
       console.log("updatedBook", res.data);
       navigate("/");
